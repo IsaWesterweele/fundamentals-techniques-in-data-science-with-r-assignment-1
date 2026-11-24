@@ -1,1 +1,16 @@
+library(dplyr)
+library(haven)
+
+dataDir <- "data"
+outDir  <- "output"
+figDir  <- "figures"
+
+ESS <- here::here(dataDir, "ESS11e04_2.csv") |>
+	read.csv()
+
+summary(ESS$alcwkdy)
+summary(ESS$alcwknd)
+summary(ESS$dscrage)
+summary(ESS$dosprt)
+table(ESS$dosprt)
 
